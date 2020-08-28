@@ -6,6 +6,14 @@
 
 ### Pretty good blogs: 
 * [Linux Commands Frequently Used by SysAdmins](https://haydenjames.io/linux-commands-frequently-used-by-linux-sysadmins-part-1/) - multi-part blog
+* [How to become a Devops Engineer in 2020](https://sopblog.com/how-to-become-a-devops-engineer-in-2020-a-complete-guide/)
+* [Web Developer Roadmap 2020](https://github.com/kamranahmedse/developer-roadmap)
+* [Compilation of Linux Stat Articles](https://github.com/kamranahmedse/developer-roadmap)
+
+### AWS:
+* [AWS for Beginners](https://www.cloudways.com/blog/aws-for-beginners/) - intro to terminology & some services
+* [AWS CLI](https://aws.amazon.com/cli/)
+* [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/#available-services)
 
 # Resources Beyond this Course:
 * Powershell for SysAdmins: Workflow Automation Made Easy by Adam Bertram
