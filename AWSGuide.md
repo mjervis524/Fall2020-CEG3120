@@ -7,31 +7,35 @@ for you to use to complete the tasks given.
 1. Get Started with AWS Educate
 2. Start building your git(hub) toolbox
 3. Use some linux commands in your AWS environment
-5. Submit your answers to Pilot in a .txt file
 
 **Important Note:**  This AWS environment only allows inbound access from following ports:
 * 22
 
 ### Setup for Windows Users
-* [Download MobaXterm Home Edition: Installer Edition](https://download.mobatek.net/2032020060430358/MobaXterm_Installer_v20.3.zip)
+1. [Download MobaXterm Home Edition: Installer Edition](https://download.mobatek.net/2032020060430358/MobaXterm_Installer_v20.3.zip)
 * Extract the contents to your Desktop.
 * Double-click to run the installer
 * Once installed, run the program one time - this finishes the installation
 * You can now delete the installation files
+2. Moba requires a Linux package.  Install using one of the two methods below:
+* Easy mode: CygUtils
+  * In Moba, select the Packages icon at the top.  
+  * Wait for the package menu to appear.
+  * In the search bar, type "cygutils".  Select the package from the result listings
+  * Select Install / Update.
+  * Restart Moba.  Start Local Terminal should work
+* Hard mode: WSL 2
+  * [Follow instructions on the Windows blog](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+  * Common pitfalls: 
+    * Windows is not fully up to date.
+    * Did not reboot **before** running the change version command
+  * After installing Ubuntu from the Windows store, open Ubuntu once
+    * After the installion message finishes, you should be prompted to create a username and password
+  * Open Moba.  You can now choose to run WSL Ubuntu *or* Moba bash.
+    * To change terminals, go to Settings -> Configuration.  Select the Terminal tab.  In the dropdown at the bottom, change from `bash` to `WSL Ubuntu`
 
 ### Mac & Linux Users
 * You should have a terminal already installed.  Hunt it down ;)
-
-## Lab Procedure
-Perform the following tasks.  Document your progress in a plain text file named `Lab01-LastName.txt`  
-where LastName is your last name
-
-At the top of the file please enter your personal details as follows:
-```
-Name: Your name
-Email: Your email
-
-```
 
 ## Before you start: Register for AWS Educate
 You should have an email from AWS Educate to guide you through account creation.  
