@@ -36,7 +36,7 @@ Each of the requirements below should be in their own function.
    * Help should detail what the script does
 
 ### Extra Credit (10%)
-Impress me.  Maybe scrape a daily message off a website for the `motd`.  Maybe have your script so beautifully documented that angels cry.  Maybe use `branching` instead of just commits.  Regardless, it should be easy to find what you did that went the extra mile, maybe with a large comment block.
+Impress me.  Maybe scrape a daily message off a website for the `motd`.  Maybe use `branching` instead of just commits.  Regardless, it should be easy to find what you did that went the extra mile, maybe with a large comment block.
 
 ## Submission
 1. Add instructor to your repository
