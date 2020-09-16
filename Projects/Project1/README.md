@@ -4,7 +4,7 @@
 Create a script that, once run, will configure your server and user directory to your custom preferences.  This script will be the only thing to run on a new system.  Internal to the script should be any service restarts needed - a user should not need to do any additional action.
 
 ### Repository Layout:
-Please add the instructor (me!) to your repository.
+Please add the instructor (`pattonsgirl`) to your repository.
 1. Resources Page:  
    * Document resources you used to complete the project requirements.  
    * Use markdown to create section headers for organization
@@ -36,7 +36,14 @@ Each of the requirements below should be in their own function.
    * Help should detail what the script does
 
 ### Extra Credit (10%)
-Impress me.  Maybe scrape a daily message off a website for the `motd`.  Maybe use `branching` instead of just commits.  Regardless, it should be easy to find what you did that went the extra mile, maybe with a large comment block.
+Impress me.  Pick from one of below options:
+* Scrape a daily message off a website for the `motd`
+* Create a user interface with tput
+   * https://ryanstutorials.net/bash-scripting-tutorial/bash-user-interface.php
+* Create a menu for the script
+   * https://www.shellscript.sh/tips/getopts/ 
+   * Minimum of –i (dash i) for install & -h (dash h) for help / usage
+
 
 ## Submission
 1. Add instructor to your repository
