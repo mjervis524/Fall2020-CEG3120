@@ -32,6 +32,8 @@ Each of the requirements below should be in their own function.
       * Truncate a common git command / git process into a lovely one liner 
       * A lighthearted command that prints out something nice (think `cowsay` or `fortune`)
    * Your script should reload `.bashrc` for you.
+   * Your `alias` commands should only be added to `.bashrc` if they do not exist.
+      * [Hint](https://stackoverflow.com/questions/9783507/how-can-i-check-in-my-bashrc-if-an-alias-was-already-set)
 5. Create a `-help` option
    * Help should detail what the script does
 
