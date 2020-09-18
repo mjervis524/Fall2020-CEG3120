@@ -20,6 +20,7 @@ Each of the requirements below should be in their own function.
 
 1. Add the script directory to your PATH
    * Your script should only do this if the **command to run your script** does not exist
+   * Append to your `.profile` file
 2. Change the `motd` to reflect information you are interested in.
    * Remove at least one default message
    * Add at least one custom message (i-nodes used, processes running, friendly fortune...)
