@@ -7,7 +7,7 @@
 
 ### Pretty good blogs: 
 * [Linux Commands Frequently Used by SysAdmins](https://haydenjames.io/linux-commands-frequently-used-by-linux-sysadmins-part-1/) - multi-part blog
-* [How to become a Devops Engineer in 2020](https://sopblog.com/how-to-become-a-devops-engineer-in-2020-a-complete-guide/)
+* [How to become a Devops Engineer in 2020](https://devopscube.com/become-devops-engineer/)
 * [Web Developer Roadmap 2020](https://github.com/kamranahmedse/developer-roadmap)
 * [Compilation of Linux Stat Articles](https://github.com/kamranahmedse/developer-roadmap)
 
