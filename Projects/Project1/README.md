@@ -24,6 +24,8 @@ Please add the instructor (`pattonsgirl`) to your repository.
 1. Add script to PATH:
    * If the command to run your script does not exist
       * Add the script directory to your PATH by appending to `.profile`
+   * **Leave a note in the script output that the user needs to reload .profile** 
+      * (ie. Run `$ source .profile` to reload).
    * Note: it is understood that the command version of using the script cannot be done until it is added to path, thus the installation requirements above.
 2. Change the `motd` to reflect information you are interested in.
    * Remove at least one default message
