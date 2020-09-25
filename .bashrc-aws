@@ -116,5 +116,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# My custom aliases
-alias ls='ls -lah'
