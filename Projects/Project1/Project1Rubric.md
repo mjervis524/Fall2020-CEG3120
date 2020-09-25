@@ -1,47 +1,51 @@
 # Project 1:
 
 ## Rubric:
+25 points total
 
-### Repository Layout:
-Repo created & instructor added: 1pt
+### Repository Layout (4 points total):
+Repo created & instructor added: 1 pt
 Resources page includes 1 or more sites / credits to project success: 1 pt
 README page includes description / usage of Project 1 script: 1 pt
 Script folder contains at least a script for the project: 1 pt
 
-### Repository usage requirements:
+### Repository usage requirements (2 points total):
 Instructor can clone the repository and run the script: 1 pt
 At least one commit / push was made to the repository: 1 pt
 
-### Script functionality requirements:
-1. Add script to PATH:
-   * If the command to run your script does not exist
-      * Add the script directory to your PATH by appending to `.profile`
-   * **Leave a note in the script output that the user needs to reload .profile** 
-      * (ie. Run `$ source .profile` to reload).
-   * Note: it is understood that the command version of using the script cannot be done until it is added to path, thus the installation requirements above.
-2. Change the `motd` to reflect information you are interested in.
-   * Remove at least one default message
-   * Add at least one custom message (i-nodes used, processes running, friendly fortune...)
-3. Make `vim` more you.
-   * Install the plugin to the directories needed.  Store pre requisite files on your github page, if needed.  If it requires a large download, have your script use `curl` or `wget` to download the file for installation.
-4. Make `alias` your ally.
-   * Add `alias` commands to `.bashrc` if they do not exist.
-      * [Hint](https://stackoverflow.com/questions/9783507/how-can-i-check-in-my-bashrc-if-an-alias-was-already-set)
-   * Required alias:
-      * An `alias` called `aws-ssh` that contains the command and parameters you have been using to log on to your AWS Educate system.
-         * Note: it is understood that this is "useless" when logged on to your AWS system.  But it won't create errors ;)
-         * Note for the note: This is a useful alias to have in your local terminal.  If using Moba + Cygutils, you'll need to create a file called `.bash_profile` and add you aliases there.
-   * Second `alias` ideas: 
-      * Truncate a common git command / git process into a lovely one liner 
-      * A lighthearted command that prints out something nice (think `cowsay` or `fortune`)
-   * Your script should reload `.bashrc` for you.
-   * **Leave a note in the script output that the user needs to do this** 
-      * (ie. Run `$ source .bashrc` to reload).
-5. Create a `-help` option
-   * Help should detail what the script does
+### Script functionality requirements (19 points total):
+1. PATH requirement (4 points total):
+* Adds the path to the script(s) to the PATH via the `.profile`: 1 pt
+* Checks an existence condition (2 pt) of either:
+    * checking if command exists
+    * checking if script directory is in path / exists
+* Outputs message to user to `source .profile`: 1 pt
+
+2. `motd` requirement (2 points total):
+* Removes one or more default messages: 1 pt
+* Adds one or more custom messages: 1 pt
+
+3. `vim` requirement minimum expectations (3 pts total):
+* Modifies `.vimrc`: 1 pt
+* Adds plugin directory (2 pts) by either:
+    * Having the plugin in the repository and copying it for installation
+    * Downloading / cloning the plugin to its installation location
+
+4. `alias` requirement (6 points total):
+* Adds aliases to `.bashrc`: 1 pt
+* Checks existence of aliases before appending to `.bashrc`: 2 pts
+* Aliases to add: 
+    * `alias` called `aws-ssh` that contains command to ssh to system: 1 pt
+    * second `alias` of choice: 1 pt
+* Output message to user to `source .bashrc`: 1 pt
+
+5. help option requirement (2 points total):
+* Running command with at least one of `help` / `-help` / `h` / `-h` does a thing: 1 pt
+* Output message of what the script does 1 pt
+
+6. All requirements above are neatly wrapped up in functions: 2 pts
 
 ### Extra Credit (10%)
-Impress me.  Pick from one of below options:
 * Scrape a daily message off a website for the `motd`
 * Create a user interface with tput
    * https://ryanstutorials.net/bash-scripting-tutorial/bash-user-interface.php
