@@ -19,3 +19,6 @@ This project will be using your script from Project 1 to create & resolve issues
     * Basic git usage (how to add, commit, & push): **2 pts**
     * What causes a pull request (ie. main not up to date with local) and how to resolve: **2 pts**
     * How to create an issue & how to solve issues: **2 pts**
+
+## Submission
+* Upload to Pilot a zip file of your repository.  Refer to recording on Collaborate if unsure.
