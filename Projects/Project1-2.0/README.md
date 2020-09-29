@@ -6,6 +6,7 @@ This project will be using your script from Project 1 to create & resolve issues
     * Each TODO you solve in your rubric should have an associated issue created.
     * Each solved issue can gain credit to your original Project 1 submission.
         * You can still do the extra credit listed in Project 1.  Perhaps use a label of "enhancement"
+    * Note that collaboration is encouraged.  Ask your classmates what resources they are using.
 * Create a git usage guide called `Git-Guide.md` in the main folder of your repository that details the following:
     * Basic git usage (how to add, commit, & push)
     * What causes a pull request (ie. main not up to date with local) and how to resolve
