@@ -6,4 +6,4 @@ where files need to go
 create user directories with read rules in a script
     right now: provide file of users
     future: connect to ldap server
-add git hooks so code must compile before a commit
+add git hooks
