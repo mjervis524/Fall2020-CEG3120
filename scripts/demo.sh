@@ -4,7 +4,10 @@
 	# Check existence
 	# export script directory to PATH
 	# Append that line to .profile
+modify_PATH () {
+	echo "Inside modify_PATH function"
 
+}
 # Alias requirement
 	# Check existence
 	# create aliases
@@ -20,5 +23,17 @@
 
 # Help page requirement
 	# check if -help was an argument given
+print_HELP () {
+	echo "Help is here"
+	# fill in with useful info about what the script is doing
+}
 
 # Something about functions
+modify_PATH
+# call print_HELP IF -help was the argument
+if [[ $1 = '-help' ]]; then
+	echo "That's a fact"
+	#call print_HELP
+fi
+
+
