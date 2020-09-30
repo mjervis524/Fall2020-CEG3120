@@ -6,12 +6,22 @@
 	# Append that line to .profile
 modify_PATH () {
 	echo "Inside modify_PATH function"
+	# check existence
+	echo 'export PATH=$PATH:/home/ubuntu/Fall2020-CEG3120/scripts' \
+		 >> ~/.profile
 
 }
 # Alias requirement
 	# Check existence
 	# create aliases
 	# append aliases to .bashrc
+add_ALIAS (){
+	# create ssh alias
+	# alias aws-ssh="ssh -i demo.key ubuntu@52.3.26.208"
+	echo 'alias aws-ssh="ssh -i demo.key ubuntu@52.3.26.208"' \
+		 >> ~/.bashrc  
+	# create other alias
+}
 
 # Vim plugin requirement
 	# pick plugin - download or keep folder in repo?
@@ -44,7 +54,7 @@ print_HELP () {
 
 # Something about functions
 modify_PATH
-plugin_VIM
+# plugin_VIM
 # call print_HELP IF -help was the argument
 if [[ $1 = '-help' ]]; then
 	echo "That's a fact"
