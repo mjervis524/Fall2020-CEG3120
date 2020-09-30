@@ -11,6 +11,13 @@
 * [Web Developer Roadmap 2020](https://github.com/kamranahmedse/developer-roadmap)
 * [Compilation of Linux Stat Articles](https://github.com/kamranahmedse/developer-roadmap)
 
+### Networking:
+* [Understanding IP Addresses, Subnets, & CIDR Notation for Networking](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking)
+* [What is Routing?](https://www.cloudflare.com/learning/network-layer/what-is-routing/)
+* [`route` Command](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/r_commands/route.html)
+* [`iptables` Essentials: Common Firewall Rules & Commands](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands)
+* [How to List & Delete `iptables` Firewall Rules](https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules)
+
 ### AWS:
 * [AWS for Beginners](https://www.cloudways.com/blog/aws-for-beginners/) - intro to terminology & some services
 * [AWS CLI](https://aws.amazon.com/cli/)
