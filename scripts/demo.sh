@@ -54,6 +54,7 @@ print_HELP () {
 
 # Something about functions
 modify_PATH
+
 # plugin_VIM
 # call print_HELP IF -help was the argument
 if [[ $1 = '-help' ]]; then
