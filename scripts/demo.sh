@@ -16,6 +16,20 @@ modify_PATH () {
 # Vim plugin requirement
 	# pick plugin - download or keep folder in repo?
 	# Create / ammend .vimrc (vim needs to know about the plugins
+plugin_VIM() {
+	# only clone plugin IF directory does not exist
+	if [ -d ~/.vim/pack/vendor/start/nerdtree ];then
+		echo "nerdtree already installed"
+		# update / do git pull on directory
+	else 
+		git clone https://github.com/preservim/nerdtree.git \
+			 ~/.vim/pack/vendor/start/nerdtree
+	fi 
+	vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" \
+		 -c q
+	# added autocmd vimenter * NERDTree to ~/.vimrc
+	echo 'autocmd vimenter * NERDTree' >> ~/.vimrc
+}
 
 # MOTD requirement
 	# create a message
@@ -30,6 +44,7 @@ print_HELP () {
 
 # Something about functions
 modify_PATH
+plugin_VIM
 # call print_HELP IF -help was the argument
 if [[ $1 = '-help' ]]; then
 	echo "That's a fact"
