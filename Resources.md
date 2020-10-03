@@ -5,6 +5,11 @@
 * [A Practical Guide to Linux: Commands, Editors, and Shell Programming](https://www.oreilly.com/library/view/a-practical-guide/9780133085129/)
 * [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)
 
+### Project 1 Resources:
+* [Check existence of a command](https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script)
+* [Check existence of a directory in PATH](https://stackoverflow.com/questions/1396066/detect-if-users-path-has-a-specific-directory-in-it)
+* [How to Set a Custom Message of the Day on Linux](https://linuxconfig.org/how-to-set-a-custom-message-of-the-day-on-linux)
+
 ### Pretty good blogs: 
 * [Linux Commands Frequently Used by SysAdmins](https://haydenjames.io/linux-commands-frequently-used-by-linux-sysadmins-part-1/) - multi-part blog
 * [How to become a Devops Engineer in 2020](https://devopscube.com/become-devops-engineer/)
