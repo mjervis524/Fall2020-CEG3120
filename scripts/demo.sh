@@ -45,6 +45,7 @@ plugin_VIM() {
 	# create a message
 	# delete unwanted messages
 modify_MOTD () {
+	echo "MOTD stuff"
 	# Note: numbers in front indicate order of messages 
 		#(00-* will print before 98-*)
 	# sudo rm /etc/update-motd.d/50-motd-news
@@ -61,21 +62,24 @@ print_HELP () {
 }
 
 install_stuff () {
-	sudo apt install fortune
+	apt install fortune
 }
 
 # break apart sudo
-# Something about functions
 if [ "$EUID" = 0 ]; then
-	modify_PATH
+	# use `sudo su`, then source script
+	# run only stuff that requires root - can take sudo out of commands
+	echo "Script called as root - messing with stuff that needs root"
+	modify_MOTD
 	install_stuff
+else 
+	# do everything not needed by root
+	echo "Script running as user - installing user stuff"
+	modify_PATH
+	add_ALIAS
+	plugin_VIM
+	if [[ $1 =~ '$-help^' ]]; then
+		echo "Help is here"
+		# call print_HELP
+	fi
 fi
-
-# plugin_VIM
-# call print_HELP IF -help was the argument
-if [[ $1 = '-help' ]]; then
-	echo "That's a fact"
-	#call print_HELP
-fi
-
-
