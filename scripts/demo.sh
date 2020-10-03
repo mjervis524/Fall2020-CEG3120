@@ -44,6 +44,14 @@ plugin_VIM() {
 # MOTD requirement
 	# create a message
 	# delete unwanted messages
+modify_MOTD () {
+	# Note: numbers in front indicate order of messages 
+		#(00-* will print before 98-*)
+	# sudo rm /etc/update-motd.d/50-motd-news
+	# sudo chmod -x /etc/update-motd.d/50-motd-news
+	# echo "You are the best!" > /path/to/motd/folder/70-my-message
+	# change permissions & change ownership & change group of that file
+}
 
 # Help page requirement
 	# check if -help was an argument given
