@@ -60,8 +60,16 @@ print_HELP () {
 	# fill in with useful info about what the script is doing
 }
 
+install_stuff () {
+	sudo apt install fortune
+}
+
+# break apart sudo
 # Something about functions
-modify_PATH
+if [ "$EUID" = 0 ]; then
+	modify_PATH
+	install_stuff
+fi
 
 # plugin_VIM
 # call print_HELP IF -help was the argument
