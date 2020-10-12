@@ -22,4 +22,3 @@ Since you've walked the startup road before, you know to thoroughly document eve
 Will be confirmed by 10/14
 
 Changelog management - manual or via GitHub projects?
-SLAPD or AWS directory service
