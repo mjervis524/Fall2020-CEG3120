@@ -5,6 +5,7 @@
 - [How Linux Works, 2nd Edition by Brian Ward](https://nostarch.com/howlinuxworks2) - ebook or print book available
 - [A Practical Guide to Linux: Commands, Editors, and Shell Programming](https://www.oreilly.com/library/view/a-practical-guide/9780133085129/)
 - [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)
+- [System Monitoring & CLI Diagnostic Tools](https://docs.monadical.com/s/system-monitoring-tools)
 
 ### Project 1 Resources:
 
@@ -39,3 +40,4 @@
 
 - Powershell for SysAdmins: Workflow Automation Made Easy by Adam Bertram
   - I recommend ebook version as there are useful links listed in the book with rather expansive URLs
+- [List of OpenSource SysAdmin Resources](https://github.com/kahun/awesome-sysadmin)
