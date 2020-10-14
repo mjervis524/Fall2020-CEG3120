@@ -16,6 +16,9 @@ Since you've walked the startup road before, you know to thoroughly document eve
 - Attach an IP address to each.
 - Install the services on the instances
 - Make networking decisions and open ports appropriately.
+  - Utilize Security Groups
+    - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
+    - Outbound does not need to be edited
 - Configure GitLab for LDAP authentication
 
 ### AWS Educate Quick Link:
@@ -24,7 +27,42 @@ Since you've walked the startup road before, you know to thoroughly document eve
 
 ## Deliverables:
 
-Will be confirmed by 10/14
+The primary deliverable for this project is a changelog that includes the components listed below. You may do this by using GitHub Projects in your class repository or by manually keeping track of changes. Since we will be building from this project, your log should include a date and/or time implemented. You may choose to break up the tasks into their own changelogs. I would get templating then check with me if you have concerns about your changelog.
 
-Changelog management - manual or via GitHub projects?
-Screenshots of working objectives?
+I have no preference on if you manipulate your repository via the AWS instance that was created for us or use your repository locally.
+
+### Changelog management includes:
+
+- A record of changes made over time
+- Justifications
+- Resources used as a template for your installation / configuration
+- Screenshot of the result
+
+### Template changelog:
+
+Note: I tend to think of changelogs as old events sinking to the bottom - therefore most recent changes end up at the top.
+
+# Changelog Project 2
+
+## Instances on AWS
+
+### 10/14/2020 created instances
+
+Created instance from GitLab AMI  
+Created instance from Ubuntu AMI to create SLADP server  
+[screenshot of instances]
+
+## Configure VPC in AWS
+
+### 10/15/2020 security group update
+
+Based on security rules from templated AWS system.  
+Added inbound rules for SSH (22) traffic  
+Need ports x open for SLADP and x open for GitLab.  
+[screenshot of security group rules]
+
+### 10/14/2020 creation
+
+Created VPC via wizard with default network rules  
+VPC id:  
+[screenshot of VPC]
