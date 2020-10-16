@@ -1,5 +1,7 @@
 # Midterm Review Outline for Fall 2020
 
+[Link to Repo all students are in](https://github.com/pattonsgirl/Fall2020-CEG3120-ExamReview)
+
 ## Git / GitHub
 
 - add
