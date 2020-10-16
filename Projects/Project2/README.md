@@ -16,7 +16,7 @@ Since you've walked the startup road before, you know to thoroughly document eve
 - Attach an IP address to each.
 - Install the services on the instances
 - Make networking decisions and open ports appropriately.
-  - Utilize Security Groups
+  - In VPC, utilize Security Groups to lock down cloud traffic
     - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
     - Outbound does not need to be edited
 - Configure GitLab for LDAP authentication
@@ -37,6 +37,8 @@ I have no preference on if you manipulate your repository via the AWS instance t
 - Justifications
 - Resources used as a template for your installation / configuration
 - Screenshot of the result
+
+### Rubric:
 
 ### Template changelog:
 
@@ -64,5 +66,5 @@ Need ports x open for SLADP and x open for GitLab.
 ### 10/14/2020 creation
 
 Created VPC via wizard with default network rules  
-VPC id:  
+VPC id: vpc-07021ac52230b011f
 [screenshot of VPC]
