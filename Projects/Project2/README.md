@@ -11,10 +11,10 @@ Since you've walked the startup road before, you know to thoroughly document eve
 ## Objectives:
 
 - Create a VPC on AWS.
-- Create two instances, one for GitLab, one for SLAPD.
+- Create two instances, one for ~~GitLab~~ a private git server, one for SLAPD.
   - Note: You may use AMIs
 - Attach an IP address to each.
-- Install the services on the instances
+- Install the services on the instances.
 - Make networking decisions and open ports appropriately.
   - In VPC, utilize Security Groups to lock down cloud traffic
     - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
