@@ -22,7 +22,8 @@ Since you've walked the startup road before, you know to thoroughly document eve
   - In VPC, utilize Security Groups to lock down cloud traffic
     - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
     - Outbound does not need to be edited
-- Configure GitLab for LDAP authentication
+- ~~Configure GitLab for LDAP authentication~~
+  - Making requirement for next part of project
 
 ### AWS Educate Quick Link:
 
