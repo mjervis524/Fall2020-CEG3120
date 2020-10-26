@@ -76,7 +76,7 @@ Note: I tend to think of changelogs as old events sinking to the bottom - theref
 
 - Created instance from Ubuntu AMI to manually install git server
 - Created instance from Ubuntu AMI to create SLADP server  
-  [screenshot of instances]
+  ![screenshot of instances](../../proj2pics/instances.png)
 
 ## Configure VPC in AWS
 
