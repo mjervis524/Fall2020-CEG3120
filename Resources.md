@@ -15,6 +15,16 @@
 - [How to use the motd file to get linux users to pay attention](https://www.networkworld.com/article/3219736/how-to-use-the-motd-file-to-get-linux-users-to-pay-attention.amp.html)
 - [How to check if running as `root` in a bash script](https://stackoverflow.com/questions/18215973/how-to-check-if-running-as-root-in-a-bash-script)
 
+### Project 2 Resources:
+
+- [OpenLDAP QuickStart Guide](https://www.openldap.org/doc/admin24/quickstart.html)
+- [Azure to AWS Map](https://itnext.io/azure-to-aws-map-70d4c56f55a7)
+
+#### Useful-ish:
+
+- [Install and Configure GitLab on Ubuntu 18.04](https://www.howtoforge.com/tutorial/how-to-install-and-configure-gitlab-on-ubuntu-1804/)
+- [How to set up a GitLab Server and Host your own Git Repositories](https://www.techrepublic.com/article/how-to-set-up-a-gitlab-server-and-host-your-own-git-repositories/)
+
 ### Pretty good blogs:
 
 - [Linux Commands Frequently Used by SysAdmins](https://haydenjames.io/linux-commands-frequently-used-by-linux-sysadmins-part-1/) - multi-part blog

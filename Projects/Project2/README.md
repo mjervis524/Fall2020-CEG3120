@@ -11,8 +11,11 @@ Since you've walked the startup road before, you know to thoroughly document eve
 ## Objectives:
 
 - Create a VPC on AWS.
-- Create two instances, one for ~~GitLab~~ a private git server, one for SLAPD.
-  - Note: You may use AMIs
+- Create a code repository (GitLab or git server)
+  - GitLab AMI - if you go this route, you'll likely be forced to use a t2.medium, which means you are responsible for cost management (spinning down the server when not in use)
+  - Ubuntu AMI + manually install git server - in changelog notes, put in what site you followed & any unique configurations. While not "secure" you might also jot down a password hint.
+  - REQUIREMENT: screenshot of a repo local and remote repo
+- Create an OpenLDAP server
 - Attach an IP address to each.
 - Install the services on the instances.
 - Make networking decisions and open ports appropriately.
@@ -46,25 +49,45 @@ Note: I tend to think of changelogs as old events sinking to the bottom - theref
 
 # Changelog Project 2
 
+## Server Configurations
+
+### 10/24/2020 Installed git server
+
+- Installed based on guide
+- Create git user
+- Password hint coursegit
+- Setup ssh key on local system, uploaded public key to git user authorized_keys file
+- Verified ssh key works by ssh'ing to system
+- Put bare repo on remote, cloned local.
+- Initialized repo on local, still needed to create bare on remote
+  - Had to use `git push -u origin master`
+  - TODO: Figure out bare, scp, and the key to happiness.
+
 ## Instances on AWS
+
+### 10/15/2020 trashed instance
+
+- GitLab requires more resources (setup on t2.micro server). Tanked system during install.
+- Create new instance, taking manual server approach
+- Git server IP: 35.153.218.176
 
 ### 10/14/2020 created instances
 
-Created instance from GitLab AMI  
-Created instance from Ubuntu AMI to create SLADP server  
-[screenshot of instances]
+- Created instance from Ubuntu AMI to manually install git server
+- Created instance from Ubuntu AMI to create SLADP server  
+  [screenshot of instances]
 
 ## Configure VPC in AWS
 
 ### 10/15/2020 security group update
 
-Based on security rules from templated AWS system.  
-Added inbound rules for SSH (22) traffic  
-Need ports x open for SLADP and x open for GitLab.  
-[screenshot of security group rules]
+- Based on security rules from templated AWS system.
+- Added inbound rules for SSH (22) traffic
+- Need ports x open for SLADP and x open for GitLab.  
+  [screenshot of security group rules]
 
 ### 10/14/2020 creation
 
-Created VPC via wizard with default network rules  
-VPC id: vpc-07021ac52230b011f
-[screenshot of VPC]
+- Created VPC via wizard with default network rules
+- VPC id: vpc-07021ac52230b011f
+  [screenshot of VPC]
