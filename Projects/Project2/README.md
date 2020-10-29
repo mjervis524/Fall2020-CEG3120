@@ -17,7 +17,6 @@ Since you've walked the startup road before, you know to thoroughly document eve
   - REQUIREMENT: screenshot of a repo local and remote repo
 - Create an OpenLDAP server
 - Attach an IP address to each.
-- Install the services on the instances.
 - Make networking decisions and open ports appropriately.
   - In VPC, utilize Security Groups to lock down cloud traffic
     - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
@@ -66,6 +65,13 @@ Note: I tend to think of changelogs as old events sinking to the bottom - theref
 
 ## Instances on AWS
 
+### 10/25/2020 instance for OpenLDAP
+
+- Created Ubuntu 20.x server, tied IP 34.226.227.216
+- Install OpenLDAP [based on guide](find a guide)
+  - Password hint classlapd
+  - dc 3120-proj2.org
+
 ### 10/15/2020 trashed instance
 
 - GitLab requires more resources (setup on t2.micro server). Tanked system during install.
@@ -79,6 +85,14 @@ Note: I tend to think of changelogs as old events sinking to the bottom - theref
   ![screenshot of instances](../../proj2pics/instances.png)
 
 ## Configure VPC in AWS
+
+### 10/25/2020 security group update
+
+- added port 339 inbound access to security group
+
+### 10/22/2020 restricted inbound traffic in security group
+
+- allows only from home network
 
 ### 10/15/2020 security group update
 
