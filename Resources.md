@@ -5,6 +5,7 @@
 - [How Linux Works, 2nd Edition by Brian Ward](https://nostarch.com/howlinuxworks2) - ebook or print book available
 - [A Practical Guide to Linux: Commands, Editors, and Shell Programming](https://www.oreilly.com/library/view/a-practical-guide/9780133085129/)
 - [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)
+- [System Monitoring & CLI Diagnostic Tools](https://docs.monadical.com/s/system-monitoring-tools)
 
 ### Project 1 Resources:
 
@@ -13,6 +14,16 @@
 - [How to set a custom Message of the Day on Linux](https://linuxconfig.org/how-to-set-a-custom-message-of-the-day-on-linux)
 - [How to use the motd file to get linux users to pay attention](https://www.networkworld.com/article/3219736/how-to-use-the-motd-file-to-get-linux-users-to-pay-attention.amp.html)
 - [How to check if running as `root` in a bash script](https://stackoverflow.com/questions/18215973/how-to-check-if-running-as-root-in-a-bash-script)
+
+### Project 2 Resources:
+
+- [OpenLDAP QuickStart Guide](https://www.openldap.org/doc/admin24/quickstart.html)
+- [Azure to AWS Map](https://itnext.io/azure-to-aws-map-70d4c56f55a7)
+
+#### Useful-ish:
+
+- [Install and Configure GitLab on Ubuntu 18.04](https://www.howtoforge.com/tutorial/how-to-install-and-configure-gitlab-on-ubuntu-1804/)
+- [How to set up a GitLab Server and Host your own Git Repositories](https://www.techrepublic.com/article/how-to-set-up-a-gitlab-server-and-host-your-own-git-repositories/)
 
 ### Pretty good blogs:
 
@@ -39,3 +50,4 @@
 
 - Powershell for SysAdmins: Workflow Automation Made Easy by Adam Bertram
   - I recommend ebook version as there are useful links listed in the book with rather expansive URLs
+- [List of OpenSource SysAdmin Resources](https://github.com/kahun/awesome-sysadmin)
