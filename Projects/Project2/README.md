@@ -1,108 +1,55 @@
-# Project 2-1
+# Project 2-2
 
-## The Story
+Now that you have learned some lessons about AWS, you are going to vow to try not to mess with all of those buttons again. Your goal is to create a Cloud Formation template, a file that creates a VPC and the minimum servers so far (one git server, one openldap server)
 
-You've been convinced to join a startup company as their primary (and right now, only) systems admin. It's unclear on what their goal is, but the pay is good, so you're ready for the ride.
-
-While the new CEO runs around looking for developers, you've been tasked with getting some basic infrastructure setup. You will start by building out a directory service (phonebook) and a project repository server. Since the CEO loves linux, they requested that you use SLAPD for the directory service and GitLab as the repository server.
-
-Since you've walked the startup road before, you know to thoroughly document everything. Since email is not a good documentation method, you're going to separately keep track of things on a private GitHub repository.
+The CEO has convinced a few developers to join in on the fun! Now that you have some people, you can add them to your directory service.
 
 ## Objectives:
 
-- Create a VPC on AWS.
-- Create a code repository (GitLab or git server)
-  - GitLab AMI - if you go this route, you'll likely be forced to use a t2.medium, which means you are responsible for cost management (spinning down the server when not in use)
-  - Ubuntu AMI + manually install git server - in changelog notes, put in what site you followed & any unique configurations. While not "secure" you might also jot down a password hint.
-  - REQUIREMENT: screenshot of a repo local and remote repo
-- Create an OpenLDAP server
-- Attach an IP address to each.
-- Make networking decisions and open ports appropriately.
-  - In VPC, utilize Security Groups to lock down cloud traffic
-    - Edit inbound (ports for our services, traffic on 10.0.0.0/16)
-    - Outbound does not need to be edited
-- ~~Configure GitLab for LDAP authentication~~
-  - Making requirement for next part of project
+1. Create a CloudFormation Template that can recreate your environment installation - from the VPC to the two systems we have created so far.
 
-### AWS Educate Quick Link:
+- [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
+- Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
 
-- [Sign in to AWS educate](https://www.awseducate.com/signin/SiteLogin)
+2. Install an interface system on your openLDAP server (strongly recommend `phpldapadmin`). You can reference my installation notes:
+
+```
+sudo apt-get install slapd ldap-utils
+sudo dpkg-reconfigure slapd
+sudo apt install phpldapadmin
+sudo vim /etc/phpldapadmin/config.php
+\$servers->setValue('server','base',array('dc=your_stuff,dc=also_your_stuff'));
+```
+
+[Reference article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server)
+
+Using the interface, create the following structure:
+
+- groups:
+  - unicorns
+    - rlupin
+    - ntonks
+    - sblack
+  - devs
+    - adumbledore
+    - ntonks
+    - rlupin
+  - finance
+    - ssnape
+    - mmcgonagall
+- users:
+  - Albus Dumbledore
+  - Severus Snape
+  - Minerva McGonagall
+  - Alastor Moody
+  - Sirius Black
+  - Remus Lupin
+  - Nymphadora Tonks
 
 ## Deliverables:
 
-The primary deliverable for this project is a changelog that includes the components listed below. You may do this by using GitHub Projects in your class repository or by manually keeping track of changes. Since we will be building from this project, your log should include a date and/or time implemented. You may choose to break up the tasks into their own changelogs. I would get templating then check with me if you have concerns about your changelog.
+Fresh changelog (to keep things focused on this milestone).
 
-I have no preference on if you manipulate your repository via the AWS instance that was created for us or use your repository locally.
+Note changes you make to your security group
 
-### Changelog management includes:
-
-- A record of changes made over time
-- Justifications
-- Resources used as a template for your installation / configuration
-- Screenshot of the result
-
-### Rubric:
-
-### Template changelog:
-
-Note: I tend to think of changelogs as old events sinking to the bottom - therefore most recent changes end up at the top.
-
-# Changelog Project 2
-
-## Server Configurations
-
-### 10/24/2020 Installed git server
-
-- Installed based on guide
-- Create git user
-- Password hint coursegit
-- Setup ssh key on local system, uploaded public key to git user authorized_keys file
-- Verified ssh key works by ssh'ing to system
-- Put bare repo on remote, cloned local.
-- Initialized repo on local, still needed to create bare on remote
-  - Had to use `git push -u origin master`
-  - TODO: Figure out bare, scp, and the key to happiness.
-
-## Instances on AWS
-
-### 10/25/2020 instance for OpenLDAP
-
-- Created Ubuntu 20.x server, tied IP 34.226.227.216
-- Install OpenLDAP [based on guide](find a guide)
-  - Password hint classlapd
-  - dc 3120-proj2.org
-
-### 10/15/2020 trashed instance
-
-- GitLab requires more resources (setup on t2.micro server). Tanked system during install.
-- Create new instance, taking manual server approach
-- Git server IP: 35.153.218.176
-
-### 10/14/2020 created instances
-
-- Created instance from Ubuntu AMI to manually install git server
-- Created instance from Ubuntu AMI to create SLADP server  
-  ![screenshot of instances](../../proj2pics/instances.png)
-
-## Configure VPC in AWS
-
-### 10/25/2020 security group update
-
-- added port 339 inbound access to security group
-
-### 10/22/2020 restricted inbound traffic in security group
-
-- allows only from home network
-
-### 10/15/2020 security group update
-
-- Based on security rules from templated AWS system.
-- Added inbound rules for SSH (22) traffic
-- Need ports x open for SLADP and x open for GitLab.  
-  [screenshot of security group rules]
-
-### 10/14/2020 creation
-
-- Created VPC via wizard with default network rules
-- VPC id: vpc-07021ac52230b011f
-  [screenshot of VPC]
+Screenshot evidence of your openLDAP server structure (via the interface)
