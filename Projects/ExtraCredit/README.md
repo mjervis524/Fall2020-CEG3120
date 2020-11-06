@@ -6,7 +6,11 @@ Points are **not** all or nothing. You can get some credit for effort.
 
 ## OpenLDAP Server Setup (2 pts):
 
-Install an interface system on your openLDAP server (strongly recommend `phpldapadmin`). You can reference my installation notes:
+Install an interface system on your openLDAP server (strongly recommend `phpldapadmin`).
+
+Deliverable is a screenshot of your interface with the DIT structure described shown.
+
+You can reference my installation notes:
 
 ```
 sudo apt-get install slapd ldap-utils

@@ -18,10 +18,12 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
 2. Create a script that reads a file of usernames and performs the following actions:
 
 - Name of file with users should be an argument passed to the script
+- If the groups `devops` does not exists, you should create it
 - For each user:
   - Create a password for the user
   - The username and password should be printed to a different file. The filename should include a timestamp via the `date` command
   - Each user should be added to the group `devops`
+  - The group `devops` should have group permissions in the user's directories
   - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
 
 ```
