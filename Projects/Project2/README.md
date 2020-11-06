@@ -1,4 +1,4 @@
-# Project 2-2
+# Project 2-2 - NOT FINALIZED
 
 Now that you have learned some lessons about AWS, you are going to vow to try not to mess with all of those buttons again. Your goal is to create a Cloud Formation template, a file that creates a VPC and the minimum servers so far (one git server, one openldap server)
 
@@ -15,40 +15,9 @@ The CEO has convinced a few developers to join in on the fun! Now that you have 
 - [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
 - Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
 
-2. Install an interface system on your openLDAP server (strongly recommend `phpldapadmin`). You can reference my installation notes:
+2.
 
-```
-sudo apt-get install slapd ldap-utils
-sudo dpkg-reconfigure slapd
-sudo apt install phpldapadmin
-sudo vim /etc/phpldapadmin/config.php
-\$servers->setValue('server','base',array('dc=your_stuff,dc=also_your_stuff'));
-```
-
-[Reference article](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server)
-
-Using the interface, create the following structure:
-
-- groups:
-  - unicorns
-    - rlupin
-    - ntonks
-    - sblack
-  - devs
-    - adumbledore
-    - ntonks
-    - rlupin
-  - finance
-    - ssnape
-    - mmcgonagall
-- users:
-  - Albus Dumbledore
-  - Severus Snape
-  - Minerva McGonagall
-  - Alastor Moody
-  - Sirius Black
-  - Remus Lupin
-  - Nymphadora Tonks
+3.
 
 ## Deliverables:
 
