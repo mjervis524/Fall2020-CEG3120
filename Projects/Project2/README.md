@@ -2,7 +2,7 @@
 
 Now that you have learned some lessons about AWS, you are going to vow to try not to mess with all of those buttons again. Your goal is to create a Cloud Formation template, a file that creates a VPC and the minimum servers so far (one git server, one openldap server)
 
-The CEO has convinced a few developers to join in on the fun! Now that you have some people, you can add them to your directory service.
+The CEO has convinced a few developers to join in on the fun! Since the [directory service isn't ready for deployment](../ExtraCredit/README.md), you are going to write a script that creates users, groups, and gives those users access to certain places.
 
 ### AWS Educate Quick Link:
 
@@ -15,14 +15,28 @@ The CEO has convinced a few developers to join in on the fun! Now that you have 
 - [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
 - Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
 
-2.
+2. Create a script that reads a file of usernames and performs the following actions:
 
-3.
+- Name of file with users should be an argument passed to the script
+- For each user:
+  - Create a password for the user
+  - The username and password should be printed to a different file. The filename should include a timestamp via the `date` command
+  - Each user should be added to the group `devops`
+  - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
+
+```
+Content of sample username file:
+hpotter
+hgranger
+rweasley
+nlongbottom
+dmalfloy
+```
 
 ## Deliverables:
 
-Fresh changelog (to keep things focused on this milestone).
+In your GitHub repository, create a new folder called `CloudFormations`. In this folder is where you will place your template. This template should have a history of commits as you build out/ adjust the template.
 
-Note changes you make to your security group
+The user creation script should be put in your `scripts` directory of you repository.
 
-Screenshot evidence of your openLDAP server structure (via the interface)
+Submit a zipped version of your repository to Pilot.
