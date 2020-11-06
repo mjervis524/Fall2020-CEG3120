@@ -4,6 +4,10 @@ Now that you have learned some lessons about AWS, you are going to vow to try no
 
 The CEO has convinced a few developers to join in on the fun! Now that you have some people, you can add them to your directory service.
 
+### AWS Educate Quick Link:
+
+- [Sign in to AWS educate](https://www.awseducate.com/signin/SiteLogin)
+
 ## Objectives:
 
 1. Create a CloudFormation Template that can recreate your environment installation - from the VPC to the two systems we have created so far.
