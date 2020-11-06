@@ -1,4 +1,4 @@
-# Project 2-2 - NOT FINALIZED
+# Project 2-2
 
 Now that you have learned some lessons about AWS, you are going to vow to try not to mess with all of those buttons again. Your goal is to create a Cloud Formation template, a file that creates a VPC and the minimum servers so far (one git server, one openldap server)
 
