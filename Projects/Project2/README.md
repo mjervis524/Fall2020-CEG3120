@@ -13,11 +13,13 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
 1. Create a CloudFormation Template that can recreate your environment installation - from the VPC to the two systems we have created so far.
 
 - [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
+- Scope: "configurations" will include software that needs to be installed on the system. Do not deal with configuration files.
 - Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
 
-2. Create a script that reads a file of usernames and performs the following actions:
+2. Create a **bash** script that reads a file of usernames and performs the following actions:
 
 - Name of file with users should be an argument passed to the script
+- Script should check if it was run with `sudo`. If not, script should terminate with a message that `sudo` is required.
 - If the groups `devops` does not exists, you should create it
 - For each user:
   - Create a password for the user
