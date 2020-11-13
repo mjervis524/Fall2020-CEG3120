@@ -15,6 +15,7 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
 - [Simplified Example Config File](sample-config-file.yml)
 - [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
 - Scope: "configurations" will include software that needs to be installed on the system. Do not deal with configuration files.
+- NOTE: As per class discovery, exclude `slapd` from package installation list.
 - Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
 
 2. Create a **bash** script that reads a file of usernames and performs the following actions:
@@ -29,8 +30,9 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
   - The group `devops` should have group permissions in the user's directories
   - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
 
+### Content of sample username file:
+
 ```
-Content of sample username file:
 hpotter
 hgranger
 rweasley

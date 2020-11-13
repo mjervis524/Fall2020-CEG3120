@@ -263,13 +263,16 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
+            # reference web solution here to get a silent install working
             apt-get install -y \
               python \
               nmap \
               vim \
               git \
               wget \
-              python3-dev && \
+              python3-dev \
+              slapd \
+              ldap-utils && \
             reboot
   Ubuntu2Instance:
     Type: 'AWS::EC2::Instance'
