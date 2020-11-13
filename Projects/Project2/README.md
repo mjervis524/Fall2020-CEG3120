@@ -27,6 +27,7 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
   - Create a password for the user
   - The username and password should be printed to a different file. The filename should include a timestamp via the `date` command
   - Each user should be added to the group `devops`
+  - [Hint](https://www.howtogeek.com/50787/add-a-user-to-a-group-or-second-group-on-linux/)
   - The group `devops` should have group permissions in the user's directories
   - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
 
