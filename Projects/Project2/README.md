@@ -31,6 +31,7 @@ The CEO has convinced a few developers to join in on the fun! Since the [directo
   - The group `devops` should have group permissions in the user's directories
   - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
     - Note: this should just be a simple file, no content requirements (can be just "Hello World!").
+    - Note: You can use /etc/skel/ and put welcome message in there.
 
 ### Content of sample username file:
 
