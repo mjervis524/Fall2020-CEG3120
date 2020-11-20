@@ -1,52 +1,47 @@
-# Project 2-2
+# Project 2-3
 
-Now that you have learned some lessons about AWS, you are going to vow to try not to mess with all of those buttons again. Your goal is to create a Cloud Formation template, a file that creates a VPC and the minimum servers so far (one git server, one openldap server)
+## 1. Load balancer with HAProxy
 
-The CEO has convinced a few developers to join in on the fun! Since the [directory service isn't ready for deployment](../ExtraCredit/README.md), you are going to write a script that creates users, groups, and gives those users access to certain places.
+- Stand up proxy server (HAProxy)
+- Stand up two apache or nginx servers
+- Place a different `index.html` page on each server
+  - You can use mine in the Project 2 folder
+- Create a private / public key
+  - put public key on each server (**don't override the AWS key**)
+  - put private key on the proxy
+    - Hint: `sftp` instead of `ssh` and get the private key
+- Security groups should be changed to the following rules:
+  - Port 80 traffic from external
+  - Port 22 traffic from external
+  - Port 80 traffic in private subnet
+  - Port 22 traffic in private subnet
+- The final product should NOT have elastic IPs for the webservers. The webservers will only use their private IPs
 
-### AWS Educate Quick Link:
+### Deliverables:
 
-- [Sign in to AWS educate](https://www.awseducate.com/signin/SiteLogin)
-
-## Objectives:
-
-1. Create a CloudFormation Template that can recreate your environment installation - from the VPC to the two systems we have created so far.
-
-- [Simplified Example Config File](sample-config-file.yml)
-- [Example Configuration File](https://github.com/mkijowski/aws-cf-templates/blob/master/course-templates/ceg3400.yml)
-- Scope: "configurations" will include software that needs to be installed on the system. Do not deal with configuration files.
-- NOTE: As per class discovery, exclude `slapd` from package installation list.
-- Note: to keep costs down, you will need to delete your Cloud Stack in between build & test
-
-2. Create a **bash** script that reads a file of usernames and performs the following actions:
-
-- Name of file with users should be an argument passed to the script
-- Script should check if it was run with `sudo`. If not, script should terminate with a message that `sudo` is required.
-- If the groups `devops` does not exists, you should create it
-- For each user:
-  - Create a password for the user
-  - The username and password should be printed to a different file. The filename should include a timestamp via the `date` command
-  - Each user should be added to the group `devops`
-  - [Hint](https://www.howtogeek.com/50787/add-a-user-to-a-group-or-second-group-on-linux/)
-  - The group `devops` should have group permissions in the user's directories
-  - Place a welcome message file in each user's home directory. Make sure the user (at minimum) can read it.
-    - Note: this should just be a simple file, no content requirements (can be just "Hello World!").
-    - Note: You can use /etc/skel/ and put welcome message in there.
-
-### Content of sample username file:
+- CloudFormation template with everything **you** can automate
+  - Note: this means best effort will be counted
+  - Hint: this snippet disables automatic elastic IP address creation:
 
 ```
-hpotter
-hgranger
-rweasley
-nlongbottom
-dmalfloy
+#AssociatePublicIpAddress: 'true'
+DeviceIndex: '0'
+#DeleteOnTermination: 'true'
 ```
 
-## Deliverables:
+- Documentation of what needed to be configured outside of the template, and what you did to make it happen.
 
-In your GitHub repository, create a new folder called `CloudFormations`. In this folder is where you will place your template. This template should have a history of commits as you build out/ adjust the template.
+**Resources**
 
-The user creation script should be put in your `scripts` directory of you repository.
+- [HAProxy Load Balancer Ubuntu](https://upcloud.com/community/tutorials/haproxy-load-balancer-ubuntu/)
+- [HAProxy & Loab Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
+- [Configuring HAProxy to Set Up HTTP Load Balancing (Layer 4)](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-http-load-balancing-on-an-ubuntu-vps)
+- [Configuring HAProxy for Layer 7 Load Balancing](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-as-a-layer-7-load-balancer-for-wordpress-and-nginx-on-ubuntu-14-04)
 
-Submit a zipped version of your repository to Pilot.
+## 2. Implement Continuous Deployment (CD) - NOT FINALIZED
+
+- On the server side, create a git hook that pushes an update to the webservers everytime an update is made.
+
+**Resources**
+
+- [Hosting site from file server](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-as-a-layer-4-load-balancer-for-wordpress-application-servers-on-ubuntu-14-04)
