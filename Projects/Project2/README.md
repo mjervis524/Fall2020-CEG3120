@@ -21,9 +21,16 @@
 
 - CloudFormation template with everything **you** can automate
   - Note: this means best effort will be counted
-  - Hint: this snippet disables automatic elastic IP address creation:
+  - Hint: Snippets below show areas that need to be commented out / removed appropriately so that a public IP address does not associate with an instance:
 
 ```
+#Ubuntu2IPAddress:
+  #  Type: 'AWS::EC2::EIP'
+  #  DependsOn: AttachGateway
+  #  Properties:
+  #    Domain: vpc
+  #    InstanceId: !Ref Ubuntu2Instance
+...
 #AssociatePublicIpAddress: 'true'
 DeviceIndex: '0'
 #DeleteOnTermination: 'true'
