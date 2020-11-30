@@ -45,10 +45,14 @@ DeviceIndex: '0'
 - [Configuring HAProxy to Set Up HTTP Load Balancing (Layer 4)](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-http-load-balancing-on-an-ubuntu-vps)
 - [Configuring HAProxy for Layer 7 Load Balancing](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-as-a-layer-7-load-balancer-for-wordpress-and-nginx-on-ubuntu-14-04)
 
-## 2. Implement Continuous Deployment (CD) - NOT FINALIZED
+## 2. Implement Continuous Deployment (CD)
 
-- On the server side, create a git hook that pushes an update to the webservers everytime an update is made.
+- Utilize any combination of git hooks and secure copy methods (`rsync` and `scp`) to update both webservers without manual interaction.
 
 **Resources**
 
 - [Hosting site from file server](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-as-a-layer-4-load-balancer-for-wordpress-application-servers-on-ubuntu-14-04)
+
+**Samples**
+
+- [scp](https://en.wikipedia.org/wiki/Secure_copy_protocol): `scp -i demo-key.pem test.txt ubuntu@54.227.255.221:/home/ubuntu/test.txt`
