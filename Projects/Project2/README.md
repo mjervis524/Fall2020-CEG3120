@@ -15,13 +15,13 @@
   - Port 22 traffic from external
   - Port 80 traffic in private subnet
   - Port 22 traffic in private subnet
-- The final product should NOT have elastic IPs for the webservers. The webservers will only use their private IPs
+- ~~The final product should NOT have elastic IPs for the webservers. The webservers will only use their private IPs~~
 
 ### Deliverables:
 
 - CloudFormation template with everything **you** can automate
   - Note: this means best effort will be counted
-  - Hint: Snippets below show areas that need to be commented out / removed appropriately so that a public IP address does not associate with an instance:
+  - ~~Hint: Snippets below show areas that need to be commented out / removed appropriately so that a public IP address does not associate with an instance:~~
 
 ```
 #Ubuntu2IPAddress:
