@@ -47,6 +47,8 @@ DeviceIndex: '0'
 
 ## 2. Implement Continuous Deployment (CD)
 
+For this part, your goal is to have a main site and update all (in this case, 2) webservers at once. You may use a simple template, such as `index-main.html` that is in the project folder, or something complex, such as a personal site or site created in another class. Just make sure you are familar enough that you can make simple changes to the site to test your hooks.
+
 - You will be using the `post-receive` hook to update the website folder once a change is made (`push` received) on the server side
 - To deploy to multiple servers, you can choose a multitude of methods.
   - have `post-receive` hook on both webservers, then either:
