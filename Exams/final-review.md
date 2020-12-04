@@ -19,6 +19,7 @@
 - push
 - pull
 - clone vs fork
+- init
 - branch
 - merge
 - checkout
