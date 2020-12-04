@@ -56,6 +56,7 @@
 ## Bash
 
 - `wget`
+- `sftp`
 - IO redirection
 - Different types of quotes
 - source vs ./ vs running script using name
